@@ -1,14 +1,14 @@
-import { Link } from 'react-router';
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
     return (
       <nav>
         <ul>
-          <li><Link to='/'>Home</Link></li>
-          {/* <li><Link to='/mailboxes'>Mailboxes</Link></li>
+          <li><NavLink to='/'>Home</NavLink></li>
+          <li><NavLink to='/mailboxes'>Mailboxes</NavLink></li>
           <li>
-          <Link to="/new-mailbox">New Mailbox</Link>
-          </li> */}
+          <NavLink to="/new-mailbox">New Mailbox</NavLink>
+          </li>
         </ul>
       </nav>
     );
