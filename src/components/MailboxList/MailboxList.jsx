@@ -5,8 +5,10 @@ const MailboxList = (props) => {
         <>
         <h2>Mailbox List</h2>
         <ul>
-            <li><NavLink to={`/mailboxes/${props.mailboxes[0]._id}`}>Mailbox {props.mailboxes[0]._id}</NavLink></li>
-        </ul>
+            {props.mailboxes.map((currentMailbox) => (
+            <li key={currentMailbox._id}><NavLink to={`/mailboxes/${currentMailbox._id}`}>Mailbox {currentMailbox._id}</NavLink></li>
+            ))}
+            </ul>
         </>
     )
 }
