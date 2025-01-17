@@ -103,6 +103,13 @@ button {
   background-color: #535bf2;
 }
 
+.detail-row {
+  display: flex;
+  margin-bottom: 10px;
+}
+dd {
+  margin-inline-start: 10px;
+}
 
 @media (prefers-color-scheme: light) {
   :root {

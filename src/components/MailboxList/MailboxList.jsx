@@ -5,7 +5,7 @@ const MailboxList = (props) => {
         <>
         <h2>Mailbox List</h2>
         <ul>
-            <li><NavLink to="/mailboxes">Mailbox List</NavLink></li>
+            <li><NavLink to={`/mailboxes/${props.mailboxes[0]._id}`}>Mailbox {props.mailboxes[0]._id}</NavLink></li>
         </ul>
         </>
     )
