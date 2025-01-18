@@ -9,6 +9,7 @@ const NavBar = () => {
           <li>
           <NavLink to="/new-mailbox">New Mailbox</NavLink>
           </li>
+          <li><NavLink to='/new-letter'>New Letter</NavLink></li>
         </ul>
       </nav>
     );

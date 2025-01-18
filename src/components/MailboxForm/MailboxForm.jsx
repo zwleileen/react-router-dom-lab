@@ -3,7 +3,10 @@ import { useNavigate } from "react-router-dom";
 
 const MailboxForm = (props) => {
 
-    const [formData, setFormData] = useState([]);
+    const [formData, setFormData] = useState({
+        boxOwner: "",
+        boxSize: "Small"
+    });
 
     const navigate = useNavigate()
 
