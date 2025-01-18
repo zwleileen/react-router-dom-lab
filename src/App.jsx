@@ -26,7 +26,11 @@ const App = () => {
   const [letters, setLetters] = useState([]);
   
   const addLetter = (newLetter) => {
-    setLetters([...letters, newLetter]) 
+    const letterWithId = { //creates a new object letterWithId to add a new _id property to each letter so that we can differentiate mailbox 1 letter 1 from mailbox 1 letter 2
+      ...newLetter, 
+      _id: letters.length +1,
+    }
+    setLetters([...letters, letterWithId]) 
   }
  
   

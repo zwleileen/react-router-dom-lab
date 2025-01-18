@@ -6,7 +6,7 @@ const NewLetter = (props) => {
     const [newLetter, setNewLetter] = useState({
         mailboxId: 1,
         boxOwner: "",
-        message: ""
+        message: "" 
     });
 
     const navigate = useNavigate()
@@ -15,16 +15,17 @@ const NewLetter = (props) => {
         event.preventDefault();
         props.addLetter(newLetter);
         setNewLetter({
-            mailboxId: 1,
+            mailboxId: "",
             boxOwner: "",
             message: ""
         });
-        navigate('/mailboxes/:mailboxId')
+        navigate(`/mailboxes/${newLetter.mailboxId}`)
     }
 
     const handleChange = ({target}) => {
-        setNewLetter({...newLetter, [target.name]: target.value})
-    }
+        const value = target.name === "mailboxId" ? Number(target.value) : target.value; //this ensures that the id is always a number (instead of string) because when we retrieve the id from the html element <option value={box._id}>, the id is returned as a string
+        setNewLetter({...newLetter, [target.name]: value})
+    } 
 
     return(
         <>
@@ -34,7 +35,7 @@ const NewLetter = (props) => {
             <select id="mailboxId" name="mailboxId" value={newLetter.mailboxId} onChange={handleChange}>
             {props.mailboxes.map(box => (
                 <option key={box._id} value={box._id}>Mailbox {box._id}</option>
-            ))}
+            ))} 
             </select>
             <label htmlFor="boxOwner">Recipient</label>
             <input type="text" id="boxOwner" name="boxOwner" value={newLetter.boxOwner} onChange={handleChange} />

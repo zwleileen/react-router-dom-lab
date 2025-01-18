@@ -27,9 +27,9 @@ const MailboxDetails = (props) => {
         </dl>
         <h2>Letters</h2>
         {mailboxLetters.length ? (
-        <ul>
+        <ul className="letter">
             {mailboxLetters.map(letter => (
-                <li key={letter.mailboxId}>
+                <li key={letter._id}>
                   <p>{letter.message}</p>  
                 </li>
             ))}

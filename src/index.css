@@ -81,6 +81,10 @@ li {
   border: 2px solid rgb(1, 1, 1);
   padding: 20px;
 }
+.letter {
+  display: flex;
+  flex-direction: column;
+}
 
 form {
   display: flex;
