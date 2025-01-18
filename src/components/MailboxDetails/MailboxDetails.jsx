@@ -11,7 +11,8 @@ const MailboxDetails = (props) => {
 
     return(
         <>
-        <h2>{selectedBox.boxOwner}</h2>
+        <h1>Mailbox {selectedBox._id}</h1>
+        <h2>Details</h2>
         <dl>
             <div className="detail-row">
             <dt>Box Owner:</dt>

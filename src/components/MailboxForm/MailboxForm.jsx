@@ -20,7 +20,7 @@ const MailboxForm = (props) => {
 
     return(
         <>
-        <h2>Mailbox Form</h2>
+        <h1>New Mailbox</h1>
         <form onSubmit={handleSubmit}>
             <label htmlFor="boxOwner">Enter a Box Owner:</label>
             <input type="text" id="boxOwner" name="boxOwner" value={formData.boxOwner} onChange={handleChange} />
